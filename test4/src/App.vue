@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Header /> <!-- TODO: parameterize header message !-->
-    <ElementList /> <!-- TODO: pass data !-->
+    <ElementList v-bind:elements="elements"/> <!-- TODO: pass data !-->
   </div>
 </template>
 
@@ -29,7 +28,7 @@ export default {
           description: "Componente de Conteúdo e Estrutura"
         },
         {
-          id: 2,
+          id: 3,
           description: "Componente de Representação de Conceitos em Saúde"
         },
       ]

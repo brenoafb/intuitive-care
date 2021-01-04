@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h2> List </h2>
-    <input type="text" v-model="searchQuery" @change="updateSearch">
+    <input type="text" v-model="searchQuery" @change="updateSearch" size="48" placeholder="Busca">
     <div v-for="element in filteredElements" v-bind:key="element.id">
       <Element v-bind:element="element"/>
       <!-- <p>{{element.id}} {{element.description}}</p> !-->

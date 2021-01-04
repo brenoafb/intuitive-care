@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header /> <!-- TODO: parameterize header message !-->
+    <Header msg="Relaçao de Operadoras Ativas ANS" /> <!-- TODO: parameterize header message !-->
     <ElementList v-bind:elements="elements"/> <!-- TODO: pass data !-->
   </div>
 </template>

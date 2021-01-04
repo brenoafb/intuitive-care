@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import json from './assets/data.json'
 import Header from './components/Header.vue'
 import ElementList from './components/ElementList.vue'
 
@@ -16,25 +17,13 @@ export default {
     ElementList
   },
   data() {
-    // TODO read csv
     return {
-      elements: [
-        {
-          id: 1,
-          description: "Componente Organizacional"
-        },
-        {
-          id: 2,
-          description: "Componente de Conteúdo e Estrutura"
-        },
-        {
-          id: 3,
-          description: "Componente de Representação de Conceitos em Saúde"
-        },
-      ]
+      elements: json,
     }
-  }
+  },
 
+  beforeCreate() {
+  }
 }
 </script>
 

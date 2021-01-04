@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <p>{{element.id}} {{element.description}}</p>
+    <p>{{element['Raz�o Social']}} {{element['CNPJ']}}</p>
   </div>
 </template>
 

@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "fast-csv": "^4.3.6",
     "file-system": "^1.2.2",
+    "fuzzy-search": "^3.2.1",
     "path": "^0.12.7",
     "vue": "^2.6.11"
   },

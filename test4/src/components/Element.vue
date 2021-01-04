@@ -1,6 +1,16 @@
 <template>
   <div class="item">
-    <p>{{element['Raz�o Social']}} {{element['CNPJ']}}</p>
+    <h4>{{element['Raz�o Social']}}</h4>
+    <ul>
+      <li>{{element['Modalidade']}}</li>
+      <li>{{element['Cidade']}} - {{element['UF']}}</li>
+      <li>({{element['DDD']}}) {{element['Telefone']}}</li>
+      <li>{{element['Representante']}}</li>
+      <li>{{element['Endere�o eletr�nico']}}</li>
+      <li>CEP: {{element['CEP']}}</li>
+      <li>{{element['Logradouro']}}, {{element['Complemento']}}, {{element['N�mero']}}, {{element['Bairro']}}</li>
+      <li>Registro ANS: {{element['Registro ANS']}} - {{element['Data Registro ANS']}}</li>
+    </ul>
   </div>
 </template>
 
@@ -16,23 +26,13 @@ export default {
 
   .item {
     background: #f4f4f4;
-    padding: 10px;
+    padding: 3px;
     border-bottom: 1px #ccc dotted;
   }
 
   .is-highlighted {
     background: #f6f6f6;
     text-decoration: line-through;
-  }
-
-  .del {
-    background: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 5px 9px;
-    border-radius: 50%;
-    cursor: pointer;
-    float: right;
   }
 
 </style>

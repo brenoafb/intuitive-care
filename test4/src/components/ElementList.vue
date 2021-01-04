@@ -34,7 +34,8 @@ export default {
 
   computed: {
     filteredElements: function() {
-      const searcher = new FuzzySearch(this.elements, Object.keys(this.elements[0]));
+      const options = { caseSensitive: false, sort: true };
+      const searcher = new FuzzySearch(this.elements, Object.keys(this.elements[0]), options);
       const results = searcher.search(this.searchQuery);
       return results;
     }

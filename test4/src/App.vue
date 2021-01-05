@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Header msg="Relaçao de Operadoras Ativas ANS" /> <!-- TODO: parameterize header message !-->
-    <ElementList v-bind:elements="elements"/> <!-- TODO: pass data !-->
+    <Header msg="Relaçao de Operadoras Ativas ANS" />
+    <ElementList/>
   </div>
 </template>
 
 <script>
-import json from './assets/data.json'
+// import json from './assets/data.json'
 import Header from './components/Header.vue'
 import ElementList from './components/ElementList.vue'
 
@@ -18,12 +18,9 @@ export default {
   },
   data() {
     return {
-      elements: json,
+      elements: []
     }
   },
-
-  beforeCreate() {
-  }
 }
 </script>
 

@@ -8,7 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "fast-csv": "^4.3.6",
     "file-system": "^1.2.2",
     "fuzzy-search": "^3.2.1",
@@ -42,5 +45,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

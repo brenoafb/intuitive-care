@@ -10,4 +10,4 @@ $ pip install requests beautifulsoup4
 ```
 
 Now run the [notebook](1.ipynb) or execute the [script](../scripts/test1/1.py).
-The file then downloads to the current directory.
+The file is then downloaded to the current directory.

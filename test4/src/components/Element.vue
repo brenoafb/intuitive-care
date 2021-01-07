@@ -1,14 +1,14 @@
 <template>
   <div class="item">
-    <h4>{{element['Raz�o Social']}}</h4>
+    <h4>{{element['Razão Social']}}</h4>
     <ul>
       <li>{{element['Modalidade']}}</li>
       <li>{{element['Cidade']}} - {{element['UF']}}</li>
       <li>({{element['DDD']}}) {{element['Telefone']}}</li>
       <li>{{element['Representante']}}</li>
-      <li>{{element['Endere�o eletr�nico']}}</li>
+      <li>{{element['Endereço eletrônico']}}</li>
       <li>CEP: {{element['CEP']}}</li>
-      <li>{{element['Logradouro']}}, {{element['Complemento']}}, {{element['N�mero']}}, {{element['Bairro']}}</li>
+      <li>{{element['Bairro']}}, {{element['Logradouro']}}, {{element['Complemento']}}, {{element['Número']}}</li>
       <li>Registro ANS: {{element['Registro ANS']}} - {{element['Data Registro ANS']}}</li>
     </ul>
   </div>

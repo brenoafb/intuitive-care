@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header msg="Relaçao de Operadoras Ativas ANS" />
+    <Header msg="Relação de Operadoras Ativas ANS" />
     <ElementList/>
   </div>
 </template>

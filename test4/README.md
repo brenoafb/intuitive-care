@@ -1,24 +1,14 @@
-# test4
+# Vue.js Client + Express.js Backend
 
-## Project setup
-```
-npm install
-```
+To launch the server
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+```bash
+$ node server.js
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+To launch the client
+
+```bash
+$ npm run serve
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

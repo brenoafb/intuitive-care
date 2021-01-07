@@ -10,13 +10,16 @@
 #       format_version: '1.5'
 #       jupytext_version: 1.9.1
 #   kernelspec:
-#     display_name: Python 3
-#     language: python
+#     display_name: Python 3.8.2 64-bit
+#     metadata:
+#       interpreter:
+#         hash: 20bf69066c0dd38d51965b69d5e1b6e387082e3198ba56e97997ac55f4e50ad0
 #     name: python3
 # ---
 
-import tabula
 import pandas as pd
+import tabula
+import zipfile
 import io
 import math
 
@@ -119,11 +122,23 @@ def fix_entries(df):
         i += 1
         
     row = df.iloc[df.shape[0]-1].copy()  # copy last row
-    new_df.append(row, ignore_index=True)
+    new_df = new_df.append(row, ignore_index=True)
     return new_df
 
 new_df = fix_entries(df)
 # -
 
+new_df
+
 # We can now export to CSV
 new_df.to_csv('table-31.csv', index=False)
+
+# # Zipping files
+#
+
+files = ['table-30.csv', 'table-31.csv', 'table-32.csv']
+zip_filename = 'Teste_Intuitive_Care_breno_fatureto.zip'
+ziph = zipfile.ZipFile(zip_filename, 'w')
+for file in files:
+    ziph.write(file)
+ziph.close()

@@ -10,8 +10,10 @@
 #       format_version: '1.5'
 #       jupytext_version: 1.9.1
 #   kernelspec:
-#     display_name: Python 3
-#     language: python
+#     display_name: Python 3.8.2 64-bit
+#     metadata:
+#       interpreter:
+#         hash: 20bf69066c0dd38d51965b69d5e1b6e387082e3198ba56e97997ac55f4e50ad0
 #     name: python3
 # ---
 
@@ -26,7 +28,7 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 header = next(x for x in soup.find_all('h2') if x.string.startswith('Padrão TISS – Versão'))
 
-header.string
+print('Found: {}'.format(header.string))
 
 a_tag = header.findNext('a')
 

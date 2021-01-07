@@ -1,5 +1,7 @@
 # Vue.js Client + Express.js Backend
 
+![Demo](demo.gif)
+
 To launch the server
 
 ```bash

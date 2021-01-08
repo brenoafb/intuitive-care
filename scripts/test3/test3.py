@@ -10,15 +10,17 @@
 #       format_version: '1.5'
 #       jupytext_version: 1.9.1
 #   kernelspec:
-#     display_name: Python 3
-#     language: python
+#     display_name: Python 3.8.2 64-bit
+#     metadata:
+#       interpreter:
+#         hash: 20bf69066c0dd38d51965b69d5e1b6e387082e3198ba56e97997ac55f4e50ad0
 #     name: python3
 # ---
 
 import psycopg2
 from os import listdir
 
-DB = 'test'
+DB = 'test3'
 USER = 'breno'
 PORT = 5433  # typically 5432
 
@@ -160,17 +162,33 @@ def fetch_companies(results):
 description = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
 start_date = '2020-01-01'
 end_date = '2021-01-01'
+output_filename = 'query-year.csv'
 results = fetch_results(description, start_date, end_date)[:10]
 companies = fetch_companies(results)
-companies
+with open(output_filename, 'w') as f:
+    s = 'Razão Social, Registro ANS, Valor Total'
+    print(s)
+    f.write(s + '\n')
+    for company in companies:
+        s = '{}, {}, {}'.format(*company)
+        print(s)
+        f.write(s + '\n')
 
 # Second query: over the last trimester
 description = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
 start_date = '2020-07-01'
-end_date = '2021-10-01'
+end_date = '2020-10-01'
+output_filename = 'query-trimester.csv'
 results = fetch_results(description, start_date, end_date)[:10]
 companies = fetch_companies(results)
-companies
+with open(output_filename, 'w') as f:
+    s = 'Razão Social, Registro ANS, Valor Total'
+    print(s)
+    f.write(s + '\n')
+    for company in companies:
+        s = '{}, {}, {}'.format(*company)
+        print(s)
+        f.write(s + '\n')
 
 
 def shutdown(conn, cur):
